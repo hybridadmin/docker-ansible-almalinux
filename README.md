@@ -1,7 +1,7 @@
-# CentOS Docker Images with ansible and systemd
+# AlmaLinux Docker Images with ansible and systemd
 ![Build](https://github.com/hybridadmin/docker-ansible-almalinux/workflows/Build/badge.svg?branch=main) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-almalinux)
 
-> CentOS Docker images to be used for testing ansible playbooks and roles.
+> AlmaLinux Docker images to be used for testing ansible playbooks and roles.
 
 ## Quick reference
 
