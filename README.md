@@ -13,6 +13,7 @@
 
 ## Supported tags and respective `Dockerfile` links
 
+- [`9`](https://github.com/hybridadmin/docker-ansible-almalinux/tree/main/9/Dockerfile)
 - [`latest`, `8`](https://github.com/hybridadmin/docker-ansible-almalinux/tree/main/8/Dockerfile)
 
 ## How to Build the image
