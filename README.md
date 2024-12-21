@@ -1,6 +1,6 @@
 # AlmaLinux Docker Images with ansible and systemd
 
-![Build](https://github.com/hybridadmin/docker-ansible-almalinux/workflows/Build/badge.svg?branch=main) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-almalinux)
+![Build](https://img.shields.io/github/actions/workflow/status/hybridadmin/docker-ansible-almalinux/build.yml) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-almalinux)
 
 > AlmaLinux Docker images to be used for testing ansible playbooks and roles.
 
@@ -36,7 +36,7 @@ docker pull hybridadmin/ansible-almalinux:latest
 Run a container using the image with the following command:
 
 ```console
-docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro hybridadmin/ansible-almalinux:latest
+docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:rw --cgroupns=host hybridadmin/ansible-almalinux:latest
 ```
 
 Use ansible inside the container:
