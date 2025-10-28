@@ -1,4 +1,4 @@
-FROM almalinux:8
+FROM almalinux:10
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
 
 ENV container=docker
@@ -16,8 +16,8 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /lib/systemd/system/anaconda.target.wants/*
 
 # Install requirements.
-RUN yum -y update \
- && yum --enablerepo=powertools -y install \
+RUN dnf -y update \
+ && dnf --enablerepo=crb -y install \
       epel-release \
       initscripts \
       glibc-langpack-en \
@@ -27,7 +27,6 @@ RUN yum -y update \
       libyaml-devel \
       python3 \
       python3-pip \
-      python3-pyyaml \
  && yum clean all
 
 # Install Ansible via Pip.

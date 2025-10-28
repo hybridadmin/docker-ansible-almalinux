@@ -1,9 +1,8 @@
 FROM almalinux:9
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
 
-ENV container docker
-
-ENV pip_packages "ansible yamllint ansible-lint pymysql"
+ENV container=docker
+ENV pip_packages="ansible yamllint ansible-lint pymysql"
 
 RUN cd /lib/systemd/system/sysinit.target.wants/; \
     for i in *; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i; done
